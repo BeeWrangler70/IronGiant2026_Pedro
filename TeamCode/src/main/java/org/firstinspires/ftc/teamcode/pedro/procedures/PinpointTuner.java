@@ -24,7 +24,7 @@ public class PinpointTuner extends Procedure {
     @Override
     public void run() throws InterruptedException {
         Inputs inputs = inputs("Setup", "Set Pinpoint HardwareMap Name and Odometry Pod Type");
-        Inputs.Field<String> pinpointName = inputs.s("HardwareMap Name").withDefault("pinpoint");
+        Inputs.Field<String> pinpointName = inputs.s("HardwareMap Name").withDefault("odo");
         Inputs.Field<PodType> podType = inputs.e("Odometry Pod Type", PodType.class).withDefault(PodType.FOUR_BAR);
         awaitInputs(inputs);
 
